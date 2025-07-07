@@ -1,14 +1,13 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom"; // Importa useNavigate
+import { Link, useNavigate } from "react-router-dom"; 
 import { useGlobalReducer } from "../hooks/useGlobalReducer";
 
 export const Navbar = () => {
     const { store, actions } = useGlobalReducer();
-    const navigate = useNavigate(); // Obtén la función de navegación
-
+    const navigate = useNavigate(); 
     const handleLogout = () => {
-        actions.logout(); // Ejecuta la acción de logout para limpiar el token
-        navigate("/login"); // Redirige explícitamente a la página de login
+        actions.logout(); 
+        navigate("/login"); 
     };
 
     return (
